@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width">
+    <title>Signup!</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src=./js/materialize.min.js></script>
+    <link href="./css/materialize.min.css" rel="stylesheet">
+    <link  rel="stylesheet" href="./css/global.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container row">
+        <div class="card-panel col l4 offset-l4 " id="signup">
+            <div class="card-title center-align">
+                <label > 考勤系统注册页 </label>
+            </div>
+            <div class="card-image center-align">
+                <img src="logo.jpg" id="logo">
+            </div>
+            <div class="card-action">
+                <form name="form1" method="post" action="register.php">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="username" type="text" class="validate"    name="username">
+                            <label for="username">用户名</label>
+                            <label id="warning_u" for="username" data-error="The username can not be empty！"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">vpn_key</i>
+                            <input id="password" type="password" class="validate" name="password">
+                            <label for="password">密码</label>
+                            <label id="warning_p" for="password" data-error="The password can not be empty！"></label>
+                        </div>
+                    </div>
+                    <input name="go" type="submit" class="col l4 offset-l4 waves-effect white-text center-align" value="Go!" style="border-color:#4a148c;background-color: #4a148c;" id="new_submit">
+                </form>
+                <div class="col l4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

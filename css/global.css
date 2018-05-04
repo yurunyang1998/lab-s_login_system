@@ -1,0 +1,44 @@
+body{
+    background-image: url("../background.jpeg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#signup {
+    max-width: 600px;
+    background-color: white;
+    margin-top: 10%;
+    height: 500px;
+}
+
+#login {
+    max-width: 600px;
+    background-color: white;
+    margin-top: 10%;
+    height: 620px;
+}
+
+#new_submit
+{
+    margin-bottom: fill;
+}
+
+#logo{
+    height: 75%;
+    width: 75%;
+}
+
+#warning_p{
+    color: #78909c;
+    display: none;
+}
+
+#warning_u{
+    color: #78909c;
+    display: none;
+}
