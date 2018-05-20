@@ -47,7 +47,8 @@
             $time_add = 0;
             while($time = mysqli_fetch_array($timeresult))  //一个个加在一起
             {
-                #var_dump($time);
+                var_dump($time['length']);
+                $data = data_parse_from_format('%d天%H小时%i分%s秒');
 
                 // 这里加一个时间戳转换的
                 $timd_add =  $time['length']+$time_add;
@@ -56,15 +57,15 @@
                 //echo ($time[0]);
             }
             //get 到了这个人的总时间 time_add
-
-            $insert_sql="insert into rank('id','name','sumtime','grade') VALUE (NULL ,$name,$time_add,NULL )";
-            $inseer_result = mysqli_query($conn,$insert_sql);
+            echo $name;
+            echo $time_add;
+            $insert_sql="INSERT INTO rank VALUES (NULL,'$name','$time_add',NULL)";
+            #$inseer_result = mysqli_query($conn,$insert_sql);
             if(!$inseer_result)
             {
                 echo "error";
                 //写到日志里面
             }
-
 
 
 
