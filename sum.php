@@ -1,7 +1,7 @@
 <?php
     //链接数据库
     //echo 1;
-    //header("Content-type: text/html; charset=utf-8");
+    header("Content-type: text/html; charset=utf-8");
     $host='localhost';
     $username='root';
     $passowrd='admin';
@@ -47,11 +47,15 @@
             $time_add = 0;
             while($time = mysqli_fetch_array($timeresult))  //一个个加在一起
             {
-                var_dump($time['length']);
-                $data = data_parse_from_format('%d天%H小时%i分%s秒');
+                //($time['length']);
+                //echo  $time['length'];
 
                 // 这里加一个时间戳转换的
-                $timd_add =  $time['length']+$time_add;
+                $nowtime = date('H-i-s','943891200');
+                //$nowtime = strtotimte($time['length']);
+                //echo  $nowtime;
+                echo  $nowtime;
+                $timd_add =  $time['length']+$nowtime;
 
                 echo "</br>";
                 //echo ($time[0]);
